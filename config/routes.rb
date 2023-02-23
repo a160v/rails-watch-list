@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  # get 'lists/index'
-  # get 'lists/show'
-  # get 'lists/new'
-  # get 'lists/create'
   get 'lists', to: 'lists#index'
+  get 'lists/new', to: 'lists#new'
+  post 'lists', to: 'lists#create'
+  get 'lists/:id', to: 'lists#show', as: 'list'
 end
